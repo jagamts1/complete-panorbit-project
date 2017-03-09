@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block content %}   
+    <div class="container">
+        <form id="loginForm" method="POST" action="">
+                {{form.otp}}
+                {% csrf_token %}
+            <input type="submit" value="Sign In" id="sign_in"/>
+        </form>
+    </div>
+{% endblock %}

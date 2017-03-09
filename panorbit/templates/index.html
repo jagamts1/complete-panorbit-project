@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block content %}
+    <div class="container">
+        <form id="loginForm"  method="POST" action="" >
+            {{form.email}}
+            {% csrf_token %}
+            <input type="submit" value="Generate OTP" id="gen_otp" />
+        </form>
+    </div>
+{% endblock %}

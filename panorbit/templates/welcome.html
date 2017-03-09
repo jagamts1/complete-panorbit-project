@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Welcome{% endblock %}
+{% block content %}
+    <div class="container">
+        <form id="loginForm">
+            <div style="text-align:center;">
+                <h3>Welcome {{user}}</h3>
+            </div>
+            <input type="button" value="Log Out" id="logout" onclick="location.href='{% url 'panorbit_user:logout' %}'" />
+            <input style="float:right;" type="button" value="Edit" id="edit" onclick="location.href='{% url 'panorbit_user:edit' %}'"  />
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Edit{% endblock %}
+{% block content %}
+    <div class="container">
+        <form id="loginForm" action="" method="POST">
+            {{form.first_name}}
+            {{form.last_name}}
+            {{form.father_name}}
+            {{form.gender}}
+            {{form.email}}
+            {{form.phonenumber}}
+            {{form.spouse_name}}
+            {% csrf_token %}
+            <input type="submit" value="Save" id="save" />
+        </form>
+    </div>
+{% endblock %}
